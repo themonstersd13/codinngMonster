@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+body{
+    background-color: #F4F4F4;
+}
+.containerTop{
+    /* background-image: linear-gradient(#2a4e05, #6cef25); */
+    background-color:#E8F7DD;
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .inner2{
+    padding: 10px;
+} */
+body {
+    font-family: Arial, sans-serif;
+}
+.navbtn{
+    text-decoration: none;
+    color:black;
+}
+.navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: #E8F7DD;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Add padding to adjust for content */
+}
+
+.logo {
+    flex: 1; /* Take up available space */
+    display: flex;
+    align-items: center;
+}
+
+.logoimg {
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+.logoimg1 {
+    height: auto; /* Make image responsive */
+    width: 45px;
+}
+
+.logoname {
+    font-size: 1.5rem;
+}
+
+.navcontent {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 30px; /* Add gap between buttons */
+}
+
+.navbtn {
+    border-radius: 10%;
+    background-color: #E8F7DD;
+    padding: 8px 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color:rgba(102, 181, 57,.7);
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the center */
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Add margin between logo and buttons */
+        justify-content: center; /* Align logo to the center */
+        display: none;
+    }
+
+    .navcontent {
+        justify-content: center; /* Align buttons to the center */
+    }
+}
+
+/* Additional media queries for smaller screens */
+
+@media only screen and (max-width: 576px) {
+    .logoimg1 {
+        width: 35px; /* Adjust logo size for smaller screens */
+    }
+
+    .logoname {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .navbtn {
+        padding: 5px; /* Adjust button padding for smaller screens */
+        font-size: 0.8rem; /* Adjust button font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .navbtn {
+        width: 80px; /* Adjust button width for smaller screens */
+    }
+}
+.logoIMG{
+  height:135px;
+  width:100px;
+  
+}
+.BIGContainer{
+    height:700px;
+    margin-top:15px;
+    background-image: url("float.jpg");
+    background-size:contain;
+    overflow-x: hidden;
+    overflow-y:scroll ;
+}
+.inner{
+    height:300px;
+    background: transparent;
+    font-size: 1.4em;
+    font-weight:600;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+.inner2{
+    background-color:#F4F4F4;
+    height:350px;
+    
+}
+.images{
+    height:300px;
+    width: 500px;
+}
+.empty{
+    background: transparent;
+}
+.inr2,.inr1{
+    padding: 20px;
+    background-color: white;
+    
+}
+.inr2{
+    border-top-right-radius: 13px;
+    font-size: 1.3em;
+    font-weight:500;
+    border-bottom-right-radius: 13px;
+}
+.inr1{
+    
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+}
+.inner0{
+    height:200px;
+    background-color:#F4F4F4;
+}
+.topLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+.JustBelow{
+    font-size: 1.3em;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.getStarted{
+    padding: 10px;
+    height:40px;
+    background-color: rgb(99, 182, 51);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 30px;
+}

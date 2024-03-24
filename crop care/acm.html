@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url(acmimg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    margin-bottom: 200px;
+    padding: 20px;
+    background-color:rgba(248, 248, 238,.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 550px;
+    color: white;
+    
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 15px auto;
+    padding-right: 30px;
+  }
+
+  .form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #9BCF53;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  #location{
+width: 185px;
+  }
+  #crop{
+  width: 320px;
+}
+::-webkit-scrollbar{
+  background-color: transparent;
+}
+ 
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Enter Your Details</h1>
+  <form id="loginForm" action="demo.html">
+    <div class="form-group" >
+      <label for="name">What is your name?</label>
+      <input type="text" placeholder="write your name" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="landArea">Enter your land area</label>
+      <input type="text" placeholder="eg.4 acre" id="landArea" name="landArea" required>
+    </div>
+    <div class="form-group">
+      <label for="location">Where do you live?</label>
+      <select id="location" name="location" required>
+        <option value="">Select Region</option>
+        <option value="Kokan">Kokan</option>
+        <option value="Paschim Maharashtra">Paschim Maharashtra</option>
+        <option value="North Maharashtra">North Maharashtra</option>
+        <option value="Marathawada">Marathawada</option>
+        <option value="Vidhrbha">Vidhrbha</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="crop">Which crop do you want to plant?</label>
+      <select id="crop" name="crop" required>
+        <option value="">Select Crop</option>
+        <option value="Bajara">Bajara</option>
+        <option value="Wheat">Wheat</option>
+        <option value="Jowar">Jowar</option>
+        <option value="Cane Sugar">Cane Sugar</option>
+        <option value="Rice">Rice</option>
+        <option value="Corn">Corn</option>
+        <option value="Turmeric">Turmeric</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

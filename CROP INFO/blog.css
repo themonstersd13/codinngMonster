@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: #E8F7DD;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Add padding to adjust for content */
+}
+
+.logo {
+    flex: 1; /* Take up available space */
+    display: flex;
+    align-items: center;
+}
+
+.logoimg {
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+.logoimg1 {
+    height: auto; /* Make image responsive */
+    width: 45px;
+}
+
+.logoname {
+    font-size: 1.5rem;
+}
+
+.navcontent {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 30px; /* Add gap between buttons */
+}
+
+.navbtn {
+    border-radius: 10%;
+    background-color: #E8F7DD;
+    padding: 8px 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbtn:hover {
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color:rgba(102, 181, 57,.7);
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the center */
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Add margin between logo and buttons */
+        justify-content: center; /* Align logo to the center */
+        display: none;
+    }
+
+    .navcontent {
+        justify-content: center; /* Align buttons to the center */
+    }
+}
+
+/* Additional media queries for smaller screens */
+
+@media only screen and (max-width: 576px) {
+    .logoimg1 {
+        width: 35px; /* Adjust logo size for smaller screens */
+    }
+
+    .logoname {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .navbtn {
+        padding: 5px; /* Adjust button padding for smaller screens */
+        font-size: 0.8rem; /* Adjust button font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .navbtn {
+        width: 80px; /* Adjust button width for smaller screens */
+    }
+}
+
+.header {
+    margin-top: 20px;
+    height: 181px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.whole-body {
+    background-color: #f2f1f1;
+}
+
+.box {
+    background-color: #fff;
+}
+
+/* .first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+}*/
+/* .crop1{
+    margin-top: 50px;
+    height: 500px;
+    background-color: aquamarine;
+    
+}  */
+
+.Btn {
+    margin-top: 5px;
+    background-color: rgb(99, 182, 51);
+    border: none;
+    color: white;
+    padding: 7px;
+    align-items: bottom;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.Btn:hover {
+    background-color: #35374f;
+}
+
+.couple-img {
+    float: right;
+    margin-right: 60px;
+
+
+}
+
+/* //image effects */
+
+/* .example {
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    text-align: center;
+} */
+
+.image .fadedbox {
+    background-color: #666666;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 87%;
+    height: 103%;
+    padding: 136px 7px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image:hover .fadedbox {
+    opacity: 0.7;
+}
+
+.image .text {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+}
+
+.image .title {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+}
+
+.image:hover .title,
+.image:focus .title {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

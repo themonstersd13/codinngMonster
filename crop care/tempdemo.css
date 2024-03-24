@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.containerTop {
+    background-color: #E8F7DD;
+}
+
+.navBtn {
+    display: inline-block;
+    margin-right: 2vw; /* Using viewport units for responsive margin */
+    font-weight: 700;
+}
+
+.navBtn:hover {
+    border: 2.5px solid white;
+    padding: 0.5vw; /* Using viewport units for responsive padding */
+    background-color: #E8F7DD;
+    opacity: 0.5;
+}
+
+.logoimg {
+    height: 2.5vh; /* Using viewport units for responsive height */
+    width: auto; /* Allowing width to adjust according to height */
+}
+
+.logoName {
+    font-weight: 250;
+}
+
+.leftsidebar {
+    background-color: #F4F4F4;
+}
+
+.mainContent {
+    padding-top: 2vh; /* Using viewport units for responsive padding */
+    background-color: #F4F4F4;
+}
+
+.DaysCounter {
+    background-color: #F4F4F4;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 50vh; /* Using viewport units for responsive height */
+}
+
+.top-sidebar {
+    width: 100%;
+    height: 17vh;
+    margin-bottom: 4vh; /* Using viewport units for responsive margin */
+}
+
+.topcont {
+    margin: 2vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 2vh; /* Using viewport units for responsive border radius */
+}
+
+
+.td{
+    background-color: white;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      border-radius: 50%;
+      height:100%;
+      border:5px solid black;
+      width:18%;
+  }
+  .td1{
+    
+    
+      font-size:0.8em;
+      border:5px solid #66B539;
+  }
+  .td2{
+    background-image: url("weatherpi.png");
+    background-size: cover;
+    font-size: 0.8em;
+    border:5px solid #22A4D8;
+  }
+  .td3{
+    /* background-image: url("wheat.png"); */
+    background-size: cover;
+    color:rgb(13, 0, 0);
+    font-size: 1.3em;
+    border:5px solid #ebbe01;
+  }
+  .tdin{
+    display:none;
+  }
+  .td:hover>.clock{
+    display:none;
+  }
+  .td:hover>.tdin{
+    font-weight: 900;
+    display:block;
+    opacity: 1.8;
+  }
+  .td:hover{
+    opacity:0.8;
+    background: none;
+  }
+
+/* Add your other styles for .td1, .td2, .td3, .tdin, .clock, etc. here */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    /* Add responsive styles here for smaller devices */
+}
+
+@media (max-width: 768px) {
+    /* Add responsive styles here for even smaller devices */
+}
+
+@media (max-width: 530px) {
+    .optionsOnNavBar,
+    .logoName {
+        position: fixed;
+    }
+}
+
+.top-sidebar {
+    display: none;
+}
+
+@media (max-width: 1030px) {
+    .leftCont {
+        display: none;
+    }
+
+    .top-sidebar {
+        display: inline-block;
+    }
+
+    .mainContent {
+        margin-left: 5rem;
+    }
+}

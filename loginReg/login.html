@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+
+  <body>
+    <div class="empty"></div>
+    <div class="container containerL">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo" />
+        <h2>Crop Care</h2>
+      </div>
+      <div class="info">
+        <form id="loginForm" method="post">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="eg.user@123" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="********" name="password" required />
+          </div>
+          <div style="display:flex;  justify-content: space-between;" class="form-group">
+            <button type="submit" class="btn-submit">Login</button>
+            <a  href="file:///E:/acmFinalProject/loginReg/register.html">don't have account? Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- // JavaScript code using Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      // Function to handle login
+
+      let storage
+
+
+      const login = async (event) => {
+        event.preventDefault();
+        // Get username and password from input fields
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        console.log(username);
+        console.log(password);
+        const data = {username, password}
+
+        console.log(data);
+
+        try {
+          // Send GET request to backend API
+          const response = await axios.post(
+            'http://localhost:3000/retrieveData', data
+          );
+          console.log("Response from server:");
+          console.log(response.data);
+
+          await localStorage.setItem("savedData", JSON.stringify(response.data));
+
+          window.location.href = 'file:///E:/acmFinalProject/crop%20care/demo.html';
+
+          
+
+          // Handle response from server
+          // For example, redirect to another page or display a message based on the response
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      };
+
+      document.getElementById('loginForm').addEventListener('submit', login); 
+    </script>
+    
+  </body>
+</html>

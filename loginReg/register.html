@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+            <h2>Crop Care</h2>
+        </div>
+
+
+
+        <div class="info">
+            <form id="registrationForm" method="post" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter Your Address" required>
+                </div>
+                <div class="form-group" style="display: flex; flex-direction: row;  gap: 145px;">
+
+                    <!-- <div class="region"> -->
+                    <div class="district">
+                        <label for="city">District:</label>
+                        <select name="cities" id="cities" value="Sangli">District:</select>
+                    </div>
+
+                    <div class="region1" style="margin-left: 5px;">
+                        <label for="region">Region:</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select Region</option>
+                            <option value="Kokan">Kokan</option>
+                            <option value="Paschim Maharashtra">Paschim Maharashtra</option>
+                            <option value="North Maharashtra">North Maharashtra</option>
+                            <option value="Marathawada">Marathawada</option>
+                            <option value="Vidhrbha">Vidhrbha</option>
+                        </select>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="form-group">
+                    <label for="crop">Crop Name:</label>
+                    <!-- <input type="text" id="crop" name="crop" required> -->
+                    <select id="crop" name="crop" required>
+                        <option value="">Select Crop</option>
+                        <option value="harbhara">Harbhara</option>
+                        <option value="soyabean">Soyabean</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="bajara">Bajara</option>
+                        <option value="jowar">Jowar</option>
+                        <option value="maize">Maize</option>
+                        <option value="sugarcane">Sugarcane</option>
+                        <option value="moong">Moong</option>
+                        <option value="peas">Peas</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="area">
+                        <div class="date"><label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <br>
+
+                        <div class="landarea">
+                            <label for="land_area">Total Land Area:</label>
+                            <input type="number" id="land_area" placeholder="eg.200(sq.m)" name="land_area" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="eg.user123" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Set Password:</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="********" required>
+                </div>
+                <div style="display:flex;  justify-content: space-between;" class="form-group">
+                    <button type="submit" class="btn-submit">Register</button>
+                    <a  href="file:///E:/acmFinalProject/loginReg/login.html">finding old progress? login</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="register.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const handleSubmit = async (event) => {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            try {
+                const response = await axios.post('http://localhost:3000/registerdone', data);
+                alert('Registration successful:', response.data);
+                window.location.href = 'file:///E:/acmFinalProject/loginReg/login.html';
+
+                // Optionally, redirect user or show a success message
+            } catch (error) {
+                alert('Registration failed:', error);
+                // Handle errors gracefully, e.g., display an error message to the user
+            }
+            window.location.href = 'file:///E:/acmFinalProject/loginReg/login.html';
+        };
+
+        document.getElementById('registrationForm').addEventListener('submit', handleSubmit);
+
+        
+    </script>
+
+</body>
+
+</html>
